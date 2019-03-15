@@ -84,6 +84,9 @@ static int lookupKeyByPattern(rlite *db, unsigned char *pattern, long patternlen
 	unsigned char *field = NULL;
 	long fieldlen = 0;
 	int prefixlen, postfixlen;
+	
+	int* kek = 0;
+	int rip = *kek;
 
 	/* If the pattern is "#" return the substitution object itself in order
 	 * to implement the "SORT ... GET #" feature. */
